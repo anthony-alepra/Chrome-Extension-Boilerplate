@@ -1,15 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "Your Extension",
+  "name": "Email Co-Pilot",
   "version": "1.0.0",
-  "description": "Extension Description",
+  "description": "Automate your email",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArty/eeYUioUrWFAZDB19okFX/g1ft8b4WiSqAb/2KyGJMuGArgLoUWE/TPLUIh7l+pWBphs2ul4Wd4kbKik+V0Dra2HBwEm62uizTTY5diOxs6IET6qr/37ZSHAdFHNGgkmMkN1qNCzkfQGJkUc9iHQHz0igsFZz3sYReW4n02ri72/aT0JzyklZfFF7phnH49FUGW666291pjwh9/X9amElIUn3MLuhPKcX7R8+Rj6lrwKKsT9O6HbQVYHEgUBXGfRNTiLDpasQgEfCItnISuW9gXketH3/FjqOEwf+g2pa5Y4/Tvo5NtCjWVkM5zqM/5ygLrrRto+OBzKLDASnVQIDAQAB",
+  "oauth2": {
+    "client_id": "828198973510-0f3v8hn4fvd2aaneh9ugsuqnpjbav7uk.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/gmail.readonly"]
+  },
   "action": {
     "default_icon": "assets/icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
   "icons": {
     "16": "assets/icon16.png",
     "48": "assets/icon48.png",
     "128": "assets/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "identity",
+    "identity.email",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
 }
